@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import MovieCategories from "./components/MovieCategories";
 import {Container} from "@mui/material";
 import AppBarHeader from "./components/AppBarHeader";
+import MovieSearchInput from "./components/MovieSearchInput";
+import SimpleForm from "./components/SimpleForm";
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
             <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} >
                 <AppBarHeader />
                 <MovieCategories />
+                <MovieSearchInput />
+                <SimpleForm />
             </Box>
         </Container>
     </div>
