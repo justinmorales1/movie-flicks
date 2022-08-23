@@ -1,6 +1,9 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import {Field, reduxForm} from "redux-form";
+import {useDispatch} from "react-redux";
+import Button from "@mui/material/Button";
+import {searchForMovies} from "../redux/actions/httpRequests";
 
 
 const renderTextField = (
@@ -16,10 +19,12 @@ const renderTextField = (
 );
 
 const MovieSearchInput = (props) => {
+    const dispatch = useDispatch();
+
     const { handleSubmit} = props;
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(searchForMovies('The lighthouse'))}>
             <div>
                 {/*<TextField type="text" id="outlined-basic" label="Outlined" variant="outlined" />*/}
                 <Field
@@ -28,6 +33,7 @@ const MovieSearchInput = (props) => {
                     label="Movie Input"
                     type="text"
                 />
+                <Button type="submit" > Submit </Button>
             </div>
         </form>
     )
