@@ -48,13 +48,12 @@ const MovieList = () => {
     })
 
     return (
-        <div>
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={3}>
-                    {movieInformationList ? movieList : null}
-                </Grid>
-            </Box>
-        </div>
+        <Box sx={{ flexGrow: 8 }}>
+            <Grid container spacing={2} rowSpacing={2} alignItems="center"
+                  justifyContent="center">
+                {movieInformationList ? movieList : null}
+            </Grid>
+        </Box>
     )
 }
 

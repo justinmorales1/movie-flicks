@@ -12,9 +12,8 @@ import MovieList from "./components/MovieList";
 function App() {
   return (
     <div>
-        <CssBaseline />
         <Container maxWidth='xl' disableGutters>
-            <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} >
+            <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }} >
                 <AppBarHeader />
                 <MovieCategories />
                 <MovieSearchInput />
