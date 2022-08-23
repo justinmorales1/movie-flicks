@@ -6,6 +6,7 @@ import {Container} from "@mui/material";
 import AppBarHeader from "./components/AppBarHeader";
 import MovieSearchInput from "./components/MovieSearchInput";
 import SimpleForm from "./components/SimpleForm";
+import MovieList from "./components/MovieList";
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
                 <AppBarHeader />
                 <MovieCategories />
                 <MovieSearchInput />
-                <SimpleForm />
+                <MovieList />
+                {/*<SimpleForm />*/}
             </Box>
         </Container>
     </div>

@@ -1,10 +1,10 @@
+import {SEARCH_MOVIES} from "../../constants/constans";
 
 
-
-const moviesReducer = (state = "Action", action) => {
+const moviesReducer = (state = [], action) => {
     switch (action.type) {
-        case "Movies":
-            return "Comedy";
+        case SEARCH_MOVIES:
+            return action.payload;
         default:
             return state;
     }

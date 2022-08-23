@@ -3,7 +3,7 @@ import React from 'react';
 const MovieCategories = () => {
     return (
         <div>
-            Movie Categories
+            Search Movies
         </div>
     )
 }
