@@ -46,7 +46,6 @@ const SelectedMovieModal = ({title}) => {
     };
 
     const addMovieToWatchList = () => {
-        console.log("Adding movie to the watchlist")
         dispatch(watchListMovie(movieInformation))
     }
 
