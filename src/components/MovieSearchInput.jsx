@@ -1,5 +1,6 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
 import {Field, reduxForm} from "redux-form";
 import {useDispatch, useSelector} from "react-redux";
 import Button from "@mui/material/Button";
@@ -28,17 +29,17 @@ const MovieSearchInput = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit(movieSearch)}>
-            <div>
+        <form onSubmit={handleSubmit(movieSearch)} >
                 {/*<TextField type="text" id="outlined-basic" label="Outlined" variant="outlined" />*/}
+            <Box textAlign="center" sx={{ m: 2}}>
                 <Field
-                    name="movieInput"
-                    component={renderTextField}
-                    label="Movie Input"
-                    type="text"
-                />
-                <Button type="submit" > Submit </Button>
-            </div>
+                        name="movieInput"
+                        component={renderTextField}
+                        label="Movie Input"
+                        type="text"
+                    />
+                <Button type="submit" variant="contained" sx={{m:1, mx:2}}> Submit </Button>
+            </Box>
         </form>
     )
 }

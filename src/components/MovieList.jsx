@@ -8,6 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {useSelector} from "react-redux";
+import SelectedMovieModal from "./SelectedMovieModal";
 
 
 // Title(pin):"The Lighthouse"
@@ -32,7 +33,7 @@ const MovieList = () => {
                         alt="green iguana"
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom variant="subtitle1" component="div">
                             {movies?.Title}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
@@ -40,7 +41,7 @@ const MovieList = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">Select</Button>
+                        <SelectedMovieModal />
                     </CardActions>
                 </Card>
             </Grid>

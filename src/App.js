@@ -15,7 +15,7 @@ function App() {
         <Container maxWidth='xl' disableGutters>
             <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }} >
                 <AppBarHeader />
-                <MovieCategories />
+                {/*<MovieCategories />*/}
                 <MovieSearchInput />
                 <MovieList />
                 {/*<SimpleForm />*/}
