@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import {selectedMovieInformation} from "../redux/actions/httpRequests";
+import {useDispatch, useSelector} from "react-redux";
 
 const style = {
     position: 'absolute',
@@ -16,10 +18,32 @@ const style = {
     p: 4,
 };
 
-const SelectedMovieModal = ({title, year}) => {
+// selectedMovie.data
+// Title(pin):"Titanic"
+// Year(pin):"1997"
+// Rated(pin):"PG-13"
+// Released(pin):"19 Dec 1997"
+// Runtime(pin):"194 min"
+// Genre(pin):"Drama, Romance"
+// Director(pin):"James Cameron"
+// Writer(pin):"James Cameron"
+// Actors(pin):"Leonardo DiCaprio, Kate Winslet, Billy Zane"
+// Plot(pin):"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
+// Language(pin):"English, Swedish, Italian, French"
+// Country(pin):"United States"
+// Awards(pin):"Won 11 Oscars. 125 wins & 83 nominations total"
+
+const SelectedMovieModal = ({title}) => {
+    const dispatch = useDispatch();
+    const movieInformation = useSelector(state => state.selectedMovie?.data)
 
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
+
+    const handleOpen = () => {
+        setOpen(true)
+        dispatch(selectedMovieInformation(title))
+    };
+
     const handleClose = () => setOpen(false);
 
     return (
@@ -33,10 +57,10 @@ const SelectedMovieModal = ({title, year}) => {
             >
                 <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h6" component="h2">
-                        {title} - {year}
+                        {movieInformation.Title} - {movieInformation.Year}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        This is a really cool movie.
+                        {movieInformation.Plot}
                     </Typography>
                     <Button onClick={() =>{}}> Select Movie </Button>
                 </Box>

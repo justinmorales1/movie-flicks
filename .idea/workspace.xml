@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64d3b3ce-3de4-4c04-b628-f040a5a4e817" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/selectedMovieReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MovieList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SelectedMovieModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectedMovieModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/constans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/constans.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/httpRequests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/httpRequests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/searchMovies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/searchMovies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661024378764</updated>
       <workItem from="1661024381331" duration="3451000" />
-      <workItem from="1661117360165" duration="14353000" />
+      <workItem from="1661117360165" duration="15191000" />
     </task>
     <servers />
   </component>
