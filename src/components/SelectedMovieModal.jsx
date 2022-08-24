@@ -16,14 +16,15 @@ const style = {
     p: 4,
 };
 
-const SelectedMovieModal = () => {
+const SelectedMovieModal = ({title, year}) => {
+
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
     return (
         <>
-            <Button onClick={handleOpen}>Open modal</Button>
+            <Button onClick={handleOpen}> More Info </Button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -32,7 +33,7 @@ const SelectedMovieModal = () => {
             >
                 <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h6" component="h2">
-                        Movie Description
+                        {title} - {year}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                         This is a really cool movie.

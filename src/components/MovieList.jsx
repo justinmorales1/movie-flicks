@@ -41,7 +41,7 @@ const MovieList = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <SelectedMovieModal />
+                        <SelectedMovieModal  year={movies?.Year} title={movies?.Title} />
                     </CardActions>
                 </Card>
             </Grid>
