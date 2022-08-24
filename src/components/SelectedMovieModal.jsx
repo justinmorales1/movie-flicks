@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import {selectedMovieInformation} from "../redux/actions/httpRequests";
 import {useDispatch, useSelector} from "react-redux";
+import {watchListMovie} from "../redux/actions/watchListMovies";
 
 const style = {
     position: 'absolute',
@@ -44,6 +45,11 @@ const SelectedMovieModal = ({title}) => {
         dispatch(selectedMovieInformation(title))
     };
 
+    const addMovieToWatchList = () => {
+        console.log("Adding movie to the watchlist")
+        dispatch(watchListMovie(movieInformation))
+    }
+
     const handleClose = () => setOpen(false);
 
     return (
@@ -57,12 +63,12 @@ const SelectedMovieModal = ({title}) => {
             >
                 <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h6" component="h2">
-                        {movieInformation.Title} - {movieInformation.Year}
+                        {movieInformation?.Title} - {movieInformation?.Year}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        {movieInformation.Plot}
+                        {movieInformation?.Plot}
                     </Typography>
-                    <Button onClick={() =>{}}> Select Movie </Button>
+                    <Button onClick={addMovieToWatchList}> Select Movie </Button>
                 </Box>
             </Modal>
         </>
