@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -37,9 +39,10 @@ const AppBarHeader = () => {
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}>
-                    <MenuItem onClick={handleClose}> Profile </MenuItem>
-                    <MenuItem onClick={handleClose}> Categories </MenuItem>
-                    <MenuItem onClick={handleClose}> Forum </MenuItem>
+                    <Link to="/" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Home </MenuItem></Link>
+                    <Link to="/movie-search" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Search </MenuItem></Link>
+                    <Link to="/watch-list" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Watchlist </MenuItem></Link>
+                    <Link to="/movie-search" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Account </MenuItem></Link>
                 </Menu>
 
             </Toolbar>

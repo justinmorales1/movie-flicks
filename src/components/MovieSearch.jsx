@@ -8,6 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {useSelector} from "react-redux";
 import SelectedMovieModal from "./SelectedMovieModal";
+import MovieSearchInput from "./MovieSearchInput";
 
 
 // Title(pin):"The Lighthouse"
@@ -17,7 +18,7 @@ import SelectedMovieModal from "./SelectedMovieModal";
 // Poster(pin):"https://m.media-amazon.com/images/M/MV5BZmE0MGJhNmYtOWNjYi00Njc5LWE2YjEtMWMxZTVmODUwMmMxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
 
 
-const MovieList = () => {
+const MovieSearch = () => {
     const movieInformation = useSelector(state => state.movies?.data?.Search[0])
     const movieInformationList = useSelector(state => state.movies.data?.Search)
 
@@ -49,6 +50,7 @@ const MovieList = () => {
 
     return (
         <Box sx={{ flexGrow: 8 }}>
+            <MovieSearchInput />
             <Grid container spacing={2} rowSpacing={2} alignItems="center"
                   justifyContent="center">
                 {movieInformationList ? movieList : null}
@@ -57,4 +59,4 @@ const MovieList = () => {
     )
 }
 
-export default MovieList;
+export default MovieSearch;

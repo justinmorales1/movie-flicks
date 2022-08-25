@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
-const SimpleForm = props => {
+const CreateAccount = props => {
     const { handleSubmit, pristine, reset, submitting } = props;
     return (
         <form onSubmit={handleSubmit}>
@@ -54,25 +54,15 @@ const SimpleForm = props => {
                 </div>
             </div>
             <div>
-                <label>Favorite Color</label>
+                <label>Favorite Movie Types</label>
                 <div>
-                    <Field name="favoriteColor" component="select">
+                    <Field name="favoriteColor" component="radio">
                         <option />
-                        <option value="ff0000">Red</option>
-                        <option value="00ff00">Green</option>
-                        <option value="0000ff">Blue</option>
+                        <option value="ff0000">Comedy</option>
+                        <option value="00ff00">Action</option>
+                        <option value="0000ff">Drama</option>
+                        <option value="0000ff">Horror</option>
                     </Field>
-                </div>
-            </div>
-            <div>
-                <label htmlFor="employed">Employed</label>
-                <div>
-                    <Field
-                        name="employed"
-                        id="employed"
-                        component="input"
-                        type="checkbox"
-                    />
                 </div>
             </div>
             <div>
@@ -92,5 +82,5 @@ const SimpleForm = props => {
 };
 
 export default reduxForm({
-    form: 'simple', // a unique identifier for this form
-})(SimpleForm);
+    form: 'createAccount', // a unique identifier for this form
+})(CreateAccount);

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64d3b3ce-3de4-4c04-b628-f040a5a4e817" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MovieWatchList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieCategories/Categories.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppBarHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBarHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieSearch.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SimpleForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateAccount.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661024378764</updated>
       <workItem from="1661024381331" duration="3451000" />
-      <workItem from="1661117360165" duration="18569000" />
+      <workItem from="1661117360165" duration="21888000" />
     </task>
     <servers />
   </component>
