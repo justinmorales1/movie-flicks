@@ -22,9 +22,9 @@ const MovieSearch = () => {
     const movieInformation = useSelector(state => state.movies?.data?.Search[0])
     const movieInformationList = useSelector(state => state.movies.data?.Search)
 
-    const movieList = movieInformationList?.map(movies => {
+    const movieList = movieInformationList?.map((movies, index) => {
         return (
-            <Grid item xs={5}>
+            <Grid item xs={5} key={index}>
                 <Card sx={{ maxWidth: 350, maxHeight: 270 }}>
                     <CardMedia
                         component="img"

@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, get } from '@reduxjs/toolkit';
 import moviesReducer from "./reducers/moviesReducer";
 import { reducer as reduxFormReducer } from 'redux-form';
 import selectedMoviesReducer from "./reducers/selectedMovieReducer";
@@ -11,6 +11,10 @@ export const store = configureStore({
     selectedMovie: selectedMoviesReducer,
     watchListMovie: watchListMovieReducer
   },
-  devTools: true
+  devTools: true,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializableCheck: false
+  }),
+
 
 });
