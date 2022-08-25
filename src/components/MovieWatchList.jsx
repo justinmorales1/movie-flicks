@@ -3,7 +3,8 @@ import { DataGrid } from '@mui/x-data-grid';
 import Typography from "@mui/material/Typography";
 import Box from '@mui/material/Box';
 import {reduxForm} from "redux-form";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {removeMovie} from "../redux/actions/watchListMovies";
 
 // Actors: "Maribel Verdú, Joaquín Furriel, Joaquín Rapalini"
 // Awards: "2 nominations"
@@ -67,6 +68,7 @@ const rows = [
 ];
 
 const MovieWatchList = (props) => {
+    const dispatch = useDispatch();
     const movieList = useSelector(state => state.watchListMovie)
     const { handleSubmit} = props;
 
@@ -78,6 +80,12 @@ const MovieWatchList = (props) => {
     //
     // console.log("The movie list is ", movies)
 
+    const removeMovieFromWatchList = (e) => {
+        console.log("The selected movie is ", e.row)
+        dispatch(removeMovie(e.row.Title))
+    }
+
+
     return (
         <form onSubmit={handleSubmit} >
             <div style={{ height: 400, width: '100%' }}>
@@ -88,11 +96,12 @@ const MovieWatchList = (props) => {
                 </Box>
                 <DataGrid
                     rows={movieList}
+                    // rows={rows}
                     columns={columns}
                     pageSize={5}
                     rowsPerPageOptions={[5]}
                     checkboxSelection
-                    onCellClick={(e)=>console.log(e)}
+                    onCellClick={(e)=>removeMovieFromWatchList(e)}
                 />
             </div>
         </form>
