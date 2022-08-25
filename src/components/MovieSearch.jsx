@@ -19,7 +19,6 @@ import MovieSearchInput from "./MovieSearchInput";
 
 
 const MovieSearch = () => {
-    const movieInformation = useSelector(state => state.movies?.data?.Search[0])
     const movieInformationList = useSelector(state => state.movies.data?.Search)
 
     const movieList = movieInformationList?.map((movies, index) => {
