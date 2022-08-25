@@ -13,7 +13,8 @@ export const store = configureStore({
   },
   devTools: true,
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-    serializableCheck: false
+    serializableCheck: false,
+    immutableCheck: false
   }),
 
 
