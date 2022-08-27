@@ -11,6 +11,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import MovieWatchList from "./components/MovieWatchList";
 import HomePage from "./components/HomePage";
 import CreateAccount from "./components/CreateAccount";
+import Account from "./components/Account";
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
                         <Route path="/movie-search" element={<MovieSearch/>} />
                         <Route path="/watch-list" element={<MovieWatchList/>} />
                         <Route path="/create-account" element={<CreateAccount/>} />
-
+                        <Route path="/account" element={<Account/>} />
                     </Routes>
                 </BrowserRouter>
                 {/*<SimpleForm />*/}
