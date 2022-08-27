@@ -22,7 +22,7 @@ function App() {
 
     return (
     <div>
-        <Container maxWidth='xl' disableGutters>
+        <Container maxWidth='xl' disableGutters >
             <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }} >
                 <BrowserRouter>
                 <AppBarHeader />

@@ -39,8 +39,8 @@ const AppBarHeader = () => {
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}>
-                    <Link to="/create-account" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Create Account </MenuItem></Link>
                     <Link to="/" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Home </MenuItem></Link>
+                    <Link to="/create-account" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Create Account </MenuItem></Link>
                     <Link to="/movie-search" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Search </MenuItem></Link>
                     <Link to="/watch-list" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Watchlist </MenuItem></Link>
                     <Link to="/movie-search" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Account </MenuItem></Link>
