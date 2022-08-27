@@ -10,6 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import {MenuItem} from "@mui/material";
+import TheatersIcon from '@mui/icons-material/Theaters';
 
 const AppBarHeader = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -32,7 +33,7 @@ const AppBarHeader = () => {
                     onClick={handleClick}
                     color="inherit"
                 >
-                    Menu Options
+                    <TheatersIcon/> Menu Options
                 </Button>
 
                 <Menu
