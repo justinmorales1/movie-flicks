@@ -13,25 +13,15 @@ import HomePage from "./components/HomePage";
 import CreateAccount from "./components/CreateAccount";
 import Account from "./components/Account";
 
-
-function App() {
-    // const location = useLocation();
-    // console.log('hash', location.hash);
-    // console.log('pathname', location.pathname);
-    // console.log('search', location.search);
-    const Home = () => <div>This is the home page.</div>
-
+const App = () => {
     return (
-    <div>
-        <Container maxWidth='xl' disableGutters >
+        <>
+            <CssBaseline />
+
+            <Container maxWidth='xl' disableGutters >
             <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }} >
                 <BrowserRouter>
                 <AppBarHeader />
-                {/*<MovieSearchInput />*/}
-                {/*<MovieSearch />*/}
-                {/*<MovieCategories />*/}
-                {/*<MovieCategories />*/}
-                {/*<BrowserRouter>*/}
                     <Routes>
                         <Route path="/" element={<HomePage/>} />
                         <Route path="/movie-search" element={<MovieSearch/>} />
@@ -40,10 +30,9 @@ function App() {
                         <Route path="/account" element={<Account/>} />
                     </Routes>
                 </BrowserRouter>
-                {/*<SimpleForm />*/}
             </Box>
         </Container>
-    </div>
+        </>
   );
 }
 
