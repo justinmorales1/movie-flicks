@@ -76,10 +76,6 @@ const MovieWatchList = (props) => {
         movie.id = i;
     });
 
-    // let movies = rows.concat(movieList)
-    //
-    // console.log("The movie list is ", movies)
-
     const removeMovieFromWatchList = (e) => {
         console.log("The selected movie is ", e.row)
         dispatch(removeMovie(e.row.Title))
@@ -100,7 +96,7 @@ const MovieWatchList = (props) => {
                     columns={columns}
                     pageSize={5}
                     rowsPerPageOptions={[5]}
-                    checkboxSelection
+                    keepNonExistentRowsSelected={false}
                     onCellClick={(e)=>removeMovieFromWatchList(e)}
                 />
             </div>

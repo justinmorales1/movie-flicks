@@ -10,6 +10,7 @@ import MovieSearch from "./components/MovieSearch";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import MovieWatchList from "./components/MovieWatchList";
 import HomePage from "./components/HomePage";
+import CreateAccount from "./components/CreateAccount";
 
 
 function App() {
@@ -34,7 +35,8 @@ function App() {
                         <Route path="/" element={<HomePage/>} />
                         <Route path="/movie-search" element={<MovieSearch/>} />
                         <Route path="/watch-list" element={<MovieWatchList/>} />
-                        <Route path="/create-account" element={<MovieWatchList/>} />
+                        <Route path="/create-account" element={<CreateAccount/>} />
+
                     </Routes>
                 </BrowserRouter>
                 {/*<SimpleForm />*/}
