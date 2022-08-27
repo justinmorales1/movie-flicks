@@ -82,9 +82,9 @@ const HomePage = () => {
     return (
         <Container ml={2} >
             <Typography variant="subtitle1" component="h2">
-               Featured Movies
+               Featured Movies and Shows
             </Typography>
-            <ImageList sx={{ width: 500, height: 450 }}>
+            <ImageList sx={{ width: 500, height: 450 }} cols={4}>
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
                         <img
