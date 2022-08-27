@@ -1,15 +1,16 @@
 import React from 'react';
-import {Container, Grid} from "@mui/material";
+import {ButtonGroup, Container, Grid, Stack} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import {useSelector} from "react-redux";
 import {submitNewAccount} from "../redux/actions/accounts";
 import {Field, reduxForm} from "redux-form";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 
 
-const Account = ({handleSubmit}) => {
+const Account = ({handleSubmit, pristine, submitting, reset}) => {
     const userStoredData = useSelector(state => state.newAccounts)
 
     return (
@@ -65,6 +66,14 @@ const Account = ({handleSubmit}) => {
                     </Container>
                 </Grid>
         </Grid>
+            <Box justifyContent='center' display='flex' m={4} py={2} >
+                <Stack direction="row" spacing={2}>
+                    <Button type="submit" >Update Information</Button>
+                    <Button type="button" onClick={reset}>
+                        Delete Account
+                    </Button>
+                </Stack>
+            </Box>
         </form>
     )
 }
