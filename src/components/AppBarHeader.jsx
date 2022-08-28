@@ -11,8 +11,19 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import {MenuItem} from "@mui/material";
 import TheatersIcon from '@mui/icons-material/Theaters';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles(theme => ({
+    title: {
+        flexGrow: 1,
+        textAlign: 'center',
+    },
+}));
+
 
 const AppBarHeader = () => {
+    const classes = useStyles();
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -48,7 +59,9 @@ const AppBarHeader = () => {
                     <Link to="/movie-reviews" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Reviews </MenuItem></Link>
 
                 </Menu>
-
+                <Typography variant="h6" color="inherit"   className={classes.title}>
+                    Movie Flicks
+                </Typography>
             </Toolbar>
         </AppBar>
     )
