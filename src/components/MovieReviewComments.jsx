@@ -7,9 +7,11 @@ import Card from "@mui/material/Card";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import CardMedia from "@mui/material/CardMedia";
-import {Grid} from "@mui/material";
+import {Grid, Rating} from "@mui/material";
 
 const MovieReviewComments = () => {
+    const [value, setValue] = React.useState(0);
+
     return (
         <Grid  container>
             <Card sx={{ minWidth: 220 }}>
@@ -21,6 +23,13 @@ const MovieReviewComments = () => {
                             alt="Live from space album cover"
                             />
                     </Grid>
+                    <Rating
+                        name="simple-controlled"
+                        value={value}
+                        onChange={(event, newValue) => {
+                            setValue(newValue);
+                        }}
+                    />
                     <Grid item xs={6}>
                         <CardContent>
                             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
