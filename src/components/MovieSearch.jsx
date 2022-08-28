@@ -10,21 +10,13 @@ import {useSelector} from "react-redux";
 import SelectedMovieModal from "./SelectedMovieModal";
 import MovieSearchInput from "./MovieSearchInput";
 
-
-// Title(pin):"The Lighthouse"
-// Year(pin):"2019"
-// imdbID(pin):"tt7984734"
-// Type(pin):"movie"
-// Poster(pin):"https://m.media-amazon.com/images/M/MV5BZmE0MGJhNmYtOWNjYi00Njc5LWE2YjEtMWMxZTVmODUwMmMxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
-
-
 const MovieSearch = () => {
     const movieInformationList = useSelector(state => state.movies.data?.Search)
 
     const movieList = movieInformationList?.map((movies, index) => {
         return (
             <Grid item xs={5} key={index}>
-                <Card sx={{ maxWidth: 350, maxHeight: 270 }}>
+                <Card sx={{ maxWidth: 350, maxHeight: 570 }}>
                     <CardMedia
                         component="img"
                         height="140"

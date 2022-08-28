@@ -11,6 +11,7 @@ import SelectedMovieModal from "./SelectedMovieModal";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 import {randomImage} from "../utilities";
+import AddMovieReview from "./AddMovieReview";
 
 const MovieReviews  = () => {
     console.log(randomImage())
@@ -24,6 +25,7 @@ const MovieReviews  = () => {
 
     return (
         <Box m={4} pb={8} sx={{ flexGrow: 8 }}>
+            <AddMovieReview />
             <Grid container spacing={2} rowSpacing={3} gap={4} alignItems="center"
                   justifyContent="center">
                 <MovieReviewComments MovieTitle="Jaws" UserName="Keith Urban" Review="I hate Sharks" Image={randomImage1}/>
