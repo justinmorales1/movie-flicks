@@ -45,6 +45,8 @@ const AppBarHeader = () => {
                     <Link to="/movie-search" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Search </MenuItem></Link>
                     <Link to="/watch-list" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Watchlist </MenuItem></Link>
                     <Link to="/account" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Account </MenuItem></Link>
+                    <Link to="/movie-reviews" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Reviews </MenuItem></Link>
+
                 </Menu>
 
             </Toolbar>

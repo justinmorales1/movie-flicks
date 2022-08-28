@@ -12,6 +12,7 @@ import MovieWatchList from "./components/MovieWatchList";
 import HomePage from "./components/HomePage";
 import CreateAccount from "./components/CreateAccount";
 import Account from "./components/Account";
+import MovieReviews from "./components/MovieReviews";
 
 const App = () => {
     return (
@@ -28,6 +29,7 @@ const App = () => {
                         <Route path="/watch-list" element={<MovieWatchList/>} />
                         <Route path="/create-account" element={<CreateAccount/>} />
                         <Route path="/account" element={<Account/>} />
+                        <Route path="/movie-reviews" element={<MovieReviews />} />
                     </Routes>
                 </BrowserRouter>
             </Box>
