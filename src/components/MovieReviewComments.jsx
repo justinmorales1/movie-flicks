@@ -13,16 +13,14 @@ const MovieReviewComments = () => {
     const [value, setValue] = React.useState(0);
 
     return (
-        <Grid  container>
-            <Card sx={{ minWidth: 220 }}>
-                    <Grid item xs={6}>
-                        <CardMedia
-                            component="img"
-                            sx={{ width: '220px' }}
-                            image="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-837358.jpg&fm=jpg"
-                            alt="Live from space album cover"
-                            />
-                    </Grid>
+        <Grid item >
+            <Card >
+                    <CardMedia
+                        component="img"
+                        sx={{ width: '220px' }}
+                        image="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-837358.jpg&fm=jpg"
+                        alt="Live from space album cover"
+                        />
                     <Rating
                         name="simple-controlled"
                         value={value}

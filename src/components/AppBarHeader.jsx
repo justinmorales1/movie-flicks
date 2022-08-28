@@ -33,7 +33,7 @@ const AppBarHeader = () => {
                     onClick={handleClick}
                     color="inherit"
                 >
-                    <TheatersIcon/> Menu Options
+                    <TheatersIcon/> Menu
                 </Button>
 
                 <Menu
