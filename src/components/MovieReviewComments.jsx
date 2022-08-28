@@ -9,7 +9,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import CardMedia from "@mui/material/CardMedia";
 import {Grid, Rating} from "@mui/material";
 
-const MovieReviewComments = ({MovieTitle, UserName, Review}) => {
+const MovieReviewComments = ({MovieTitle, UserName, Review, Image}) => {
     const [value, setValue] = React.useState(0);
 
     return (
@@ -18,7 +18,7 @@ const MovieReviewComments = ({MovieTitle, UserName, Review}) => {
                     <CardMedia
                         component="img"
                         sx={{ maxWidth: '320px' }}
-                        image="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-837358.jpg&fm=jpg"
+                        image={Image}
                         alt="Live from space album cover"
                         />
                     <Rating
