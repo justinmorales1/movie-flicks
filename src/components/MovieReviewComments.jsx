@@ -30,8 +30,10 @@ const MovieReviewComments = () => {
                             setValue(newValue);
                         }}
                     />
-                    <Grid item xs={6}>
                         <CardContent>
+                            <Typography sx={{ fontSize: 18 }} color="text.primary" gutterBottom>
+                                John Wick
+                            </Typography>
                             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                                 Justin Morales
                             </Typography>
@@ -43,7 +45,6 @@ const MovieReviewComments = () => {
                             <Button size="small"><EditIcon/> Edit </Button>
                             <Button size="small"><DeleteIcon/> Delete </Button>
                         </CardActions>
-                    </Grid>
             </Card>
         </Grid>
     )
