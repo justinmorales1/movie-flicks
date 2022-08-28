@@ -9,7 +9,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import CardMedia from "@mui/material/CardMedia";
 import {Grid, Rating} from "@mui/material";
 
-const MovieReviewComments = () => {
+const MovieReviewComments = ({MovieTitle, UserName, Review}) => {
     const [value, setValue] = React.useState(0);
 
     return (
@@ -17,7 +17,7 @@ const MovieReviewComments = () => {
             <Card >
                     <CardMedia
                         component="img"
-                        sx={{ width: '220px' }}
+                        sx={{ maxWidth: '320px' }}
                         image="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-837358.jpg&fm=jpg"
                         alt="Live from space album cover"
                         />
@@ -30,13 +30,13 @@ const MovieReviewComments = () => {
                     />
                         <CardContent>
                             <Typography sx={{ fontSize: 18 }} color="text.primary" gutterBottom>
-                                John Wick
+                                {MovieTitle}
                             </Typography>
                             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                Justin Morales
+                                {UserName}
                             </Typography>
                             <Typography variant="body2">
-                                Wow what a terrifc audience .
+                                {Review}
                             </Typography>
                         </CardContent>
                         <CardActions>

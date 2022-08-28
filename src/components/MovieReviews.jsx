@@ -16,9 +16,9 @@ const MovieReviews  = () => {
         <Box m={4} pb={8} sx={{ flexGrow: 8 }}>
             <Grid container spacing={2} rowSpacing={3} gap={4} alignItems="center"
                   justifyContent="center">
-                <MovieReviewComments />
-                <MovieReviewComments />
-                <MovieReviewComments />
+                <MovieReviewComments MovieTitle="Jaws" UserName="Keith Urban" Review="I hate Sharks"/>
+                <MovieReviewComments MovieTitle="Everything Everywhere All At Once" UserName="Tom Felvers" Review="Awesome Movie!"/>
+                <MovieReviewComments MovieTitle="Starship Troopers" UserName="Rico Sanchez" Review="The only good bug is a dead bug."/>
             </Grid>
         </Box>
     )
