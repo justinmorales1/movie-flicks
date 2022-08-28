@@ -4,6 +4,7 @@ import { reducer as reduxFormReducer } from 'redux-form';
 import selectedMoviesReducer from "./reducers/selectedMovieReducer";
 import watchListMovieReducer from "./reducers/watchListMovieReducer";
 import newAccountsReducer from "./reducers/newAccountsReducer";
+import movieReviewsReducer from "./reducers/movieReviewsReducer";
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +12,8 @@ export const store = configureStore({
     movies: moviesReducer,
     newAccounts: newAccountsReducer,
     selectedMovie: selectedMoviesReducer,
-    watchListMovie: watchListMovieReducer
+    watchListMovie: watchListMovieReducer,
+    movieReviews: movieReviewsReducer
   },
   devTools: true,
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({
