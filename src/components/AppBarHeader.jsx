@@ -12,6 +12,7 @@ import Menu from '@mui/material/Menu';
 import {MenuItem} from "@mui/material";
 import TheatersIcon from '@mui/icons-material/Theaters';
 import { makeStyles } from '@material-ui/styles';
+import AvatarImage from "./Avatar";
 
 const useStyles = makeStyles(theme => ({
     title: {
@@ -62,6 +63,7 @@ const AppBarHeader = () => {
                 <Typography variant="h6" color="inherit"   className={classes.title}>
                     Movie Flicks
                 </Typography>
+                <AvatarImage />
             </Toolbar>
         </AppBar>
     )
