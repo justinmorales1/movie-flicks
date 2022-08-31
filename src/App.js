@@ -13,12 +13,12 @@ import HomePage from "./components/HomePage";
 import CreateAccount from "./components/CreateAccount";
 import Account from "./components/Account";
 import MovieReviews from "./components/MovieReviews";
+import Forum from "./components/Forum";
 
 const App = () => {
     return (
         <>
             <CssBaseline />
-
             <Container maxWidth='xl' disableGutters mb={4}>
             <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }} >
                 <BrowserRouter>
@@ -30,6 +30,7 @@ const App = () => {
                         <Route path="/create-account" element={<CreateAccount/>} />
                         <Route path="/account" element={<Account/>} />
                         <Route path="/movie-reviews" element={<MovieReviews />} />
+                        <Route path="/forum" element={<Forum />} />
                     </Routes>
                 </BrowserRouter>
             </Box>

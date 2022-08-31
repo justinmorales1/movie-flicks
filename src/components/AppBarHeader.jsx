@@ -57,7 +57,7 @@ const AppBarHeader = () => {
                     <Link to="/watch-list" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Watchlist </MenuItem></Link>
                     <Link to="/account" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Account </MenuItem></Link>
                     <Link to="/movie-reviews" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Reviews </MenuItem></Link>
-
+                    <Link to="/forum" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Forum </MenuItem></Link>
                 </Menu>
                 <Typography variant="h6" color="inherit"   className={classes.title}>
                     Movie Flicks
