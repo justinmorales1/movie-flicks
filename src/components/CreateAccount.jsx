@@ -1,7 +1,8 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import {useDispatch, useSelector} from "react-redux";
-import {submitNewAccount} from "../redux/actions/accounts";
+import axiosApi from '../utilities/axios/axios'
+import {createNewAccount, submitNewAccount} from "../redux/actions/accounts";
 import {Grid} from "@mui/material";
 
 const CreateAccount = (props) => {
@@ -13,7 +14,7 @@ const CreateAccount = (props) => {
     console.log(formValues)
 
     return (
-        <form onSubmit={handleSubmit(() => dispatch(submitNewAccount(formValues)))}>
+        <form onSubmit={handleSubmit((values) => dispatch(createNewAccount(values)))}>
             <Grid
                 container
                 spacing={0}

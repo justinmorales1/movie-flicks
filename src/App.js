@@ -20,7 +20,7 @@ const App = () => {
         <>
             <CssBaseline />
             <Container maxWidth='xl' disableGutters mb={4}>
-            <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }} >
+            {/*<Box sx={{ bgcolor: '#cfe8fc', height: '100%' }} >*/}
                 <BrowserRouter>
                 <AppBarHeader />
                     <Routes>
@@ -33,7 +33,7 @@ const App = () => {
                         <Route path="/forum" element={<Forum />} />
                     </Routes>
                 </BrowserRouter>
-            </Box>
+            {/*</Box>*/}
         </Container>
         </>
   );
