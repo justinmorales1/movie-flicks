@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 import {selectedMovieInformation} from "../redux/actions/httpRequests";
 import {useDispatch, useSelector} from "react-redux";
 import {watchListMovie} from "../redux/actions/watchListMovies";
+import {addMovieToUserWatchList} from "../redux/actions/accounts";
 
 const style = {
     position: 'absolute',
@@ -48,6 +49,7 @@ const SelectedMovieModal = ({title}) => {
     const addMovieToWatchList = () => {
         console.log("The move information is ", movieInformation)
         dispatch(watchListMovie(movieInformation))
+        dispatch(addMovieToUserWatchList(movieInformation))
     }
 
     const handleClose = () => setOpen(false);

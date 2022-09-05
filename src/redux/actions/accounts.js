@@ -30,11 +30,35 @@ export const createNewAccount = (userData) => async (dispatch, getState) => {
 }
 
 export const retrieveUsersWatchList = () => async (dispatch, getState) => {
-
     try {
         const response = await axiosApi.get("/user-data/0");
         console.log("The response is ", response)
         dispatch(watchListMovie(response.data?.Item?.watchList))
+    } catch (e) {
+        console.log("Unable to put new user data")
+    }
+}
+
+// {
+//     "Title": "Test Movies",
+//     "id": 4,
+//     "Year": "1990",
+//     "Plot": "Its about a war with Arachnids"
+// }
+
+export const addMovieToUserWatchList = (selectedMovieOrShow) => async (dispatch, getState) => {
+    console.log("The data before is ", selectedMovieOrShow)
+    try {
+        // console.log("The data is ", data)
+        const data = {
+            "Title": selectedMovieOrShow.Title,
+            "id": 5,
+            "Year": selectedMovieOrShow.Year,
+            "Plot": selectedMovieOrShow.Plot
+        }
+        console.log("The data is ", data)
+        await axiosApi.post("/user/0", data);
+        // dispatch(watchListMovie(response.data?.Item?.watchList))
     } catch (e) {
         console.log("Unable to put new user data")
     }
