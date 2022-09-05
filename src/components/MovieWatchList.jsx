@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import Typography from "@mui/material/Typography";
 import Box from '@mui/material/Box';
 import {reduxForm} from "redux-form";
 import {useDispatch, useSelector} from "react-redux";
 import {removeMovie} from "../redux/actions/watchListMovies";
+import {retrieveUsersWatchList} from "../redux/actions/accounts";
 
 // Actors: "Maribel Verdú, Joaquín Furriel, Joaquín Rapalini"
 // Awards: "2 nominations"
@@ -71,6 +72,10 @@ const MovieWatchList = (props) => {
     const dispatch = useDispatch();
     const movieList = useSelector(state => state.watchListMovie)
     const { handleSubmit} = props;
+
+    useEffect(() => {
+        dispatch(retrieveUsersWatchList())
+    },[])
 
     movieList.forEach((movie, i) => {
         movie.id = i;

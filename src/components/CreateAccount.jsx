@@ -55,6 +55,17 @@ const CreateAccount = (props) => {
                         />
                     </div>
                 </div>
+                <div>
+                    <label>Id</label>
+                    <div>
+                        <Field
+                            name="id"
+                            component="input"
+                            type="text"
+                            placeholder="id"
+                        />
+                    </div>
+                </div>
                 <label>Sex</label>
                 <div>
                     <div>

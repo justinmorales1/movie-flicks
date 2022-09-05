@@ -7,10 +7,10 @@ const initialState = [
     { id: 4, Title: 'South Park', Year: '1994', Plot: "Its a show about 4 kids from south park." },
 ]
 
-const watchListMovieReducer = (state = initialState, action) => {
+const watchListMovieReducer = (state = [], action) => {
     switch (action.type) {
         case WATCH_LIST_MOVIE:
-            return [...state, action.payload];
+            return action.payload;
         case REMOVE_MOVIE_FROM_WATCH_LIST:
             console.log("The action was ", action.payload)
             state = state.filter(movie => {
