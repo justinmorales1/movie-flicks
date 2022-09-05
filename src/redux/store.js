@@ -5,6 +5,7 @@ import selectedMoviesReducer from "./reducers/selectedMovieReducer";
 import watchListMovieReducer from "./reducers/watchListMovieReducer";
 import newAccountsReducer from "./reducers/newAccountsReducer";
 import movieReviewsReducer from "./reducers/movieReviewsReducer";
+import featuredMoviesAndShows from "./reducers/feautedMoviesAndShow";
 
 export const store = configureStore({
   reducer: {
@@ -13,7 +14,8 @@ export const store = configureStore({
     newAccounts: newAccountsReducer,
     selectedMovie: selectedMoviesReducer,
     watchListMovie: watchListMovieReducer,
-    movieReviews: movieReviewsReducer
+    movieReviews: movieReviewsReducer,
+    featuredMoviesAndShows: featuredMoviesAndShows
   },
   devTools: true,
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({

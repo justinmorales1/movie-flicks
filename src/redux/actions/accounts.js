@@ -1,6 +1,7 @@
 import {SUBMIT_NEW_ACCOUNT} from "../../constants/constans";
 import axiosApi from './../../utilities/axios/axios'
 import {watchListMovie} from "./watchListMovies";
+import {featuredMovies} from "./homePageActions";
 
 
 export const submitNewAccount = (payload) => {
@@ -59,6 +60,17 @@ export const addMovieToUserWatchList = (selectedMovieOrShow) => async (dispatch,
         console.log("The data is ", data)
         await axiosApi.post("/user/0", data);
         // dispatch(watchListMovie(response.data?.Item?.watchList))
+    } catch (e) {
+        console.log("Unable to put new user data")
+    }
+}
+
+export const retrieveFeaturedMovies = () => async (dispatch) => {
+    console.log("The featured movies are")
+    try {
+        const response = await axiosApi.get("/featured");
+        console.log("The response is ", response)
+        dispatch(featuredMovies(response.data?.Items[0]?.FeaturedMoviesAndShows))
     } catch (e) {
         console.log("Unable to put new user data")
     }
