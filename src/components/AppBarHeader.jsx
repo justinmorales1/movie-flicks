@@ -59,6 +59,8 @@ const AppBarHeader = () => {
                     <Link to="/account" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Account </MenuItem></Link>
                     <Link to="/movie-reviews" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Movie Reviews </MenuItem></Link>
                     <Link to="/forum" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Forum </MenuItem></Link>
+                    <Link to="/update-home-page" style={{ textDecoration: 'none' }}><MenuItem onClick={handleClose}> Update Home Page </MenuItem></Link>
+
                 </Menu>
                 <Typography variant="h6" color="inherit"   className={classes.title}>
                     Movie Flicks

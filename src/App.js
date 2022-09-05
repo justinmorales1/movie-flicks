@@ -14,6 +14,7 @@ import CreateAccount from "./components/CreateAccount";
 import Account from "./components/Account";
 import MovieReviews from "./components/MovieReviews";
 import Forum from "./components/Forum";
+import UpdateHomePage from "./components/UpdateHomePage";
 
 const App = () => {
     return (
@@ -31,6 +32,7 @@ const App = () => {
                         <Route path="/account" element={<Account/>} />
                         <Route path="/movie-reviews" element={<MovieReviews />} />
                         <Route path="/forum" element={<Forum />} />
+                        <Route path="/update-home-page" element={<UpdateHomePage />} />
                     </Routes>
                 </BrowserRouter>
             {/*</Box>*/}
