@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64d3b3ce-3de4-4c04-b628-f040a5a4e817" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UpdateHomePage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppBarHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBarHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UpdateHomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UpdateHomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/accounts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/accounts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,18 +57,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/HomePage.jsx</url>
-          <line>22</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

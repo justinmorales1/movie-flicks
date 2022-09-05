@@ -1,12 +1,21 @@
 import React from 'react';
-import {createNewAccount} from "../redux/actions/accounts";
+import {createNewAccount, updateFeaturedMovies} from "../redux/actions/accounts";
 import {Grid} from "@mui/material";
 import {Field, reduxForm} from "redux-form";
+import {useDispatch} from "react-redux";
 
-const UpdateHomePage = ({pristine, submitting, handelSubmit, reset}) => {
+const UpdateHomePage = (props) => {
+    const dispatch = useDispatch();
+
+    const updateFeaturedMovieOrShow = (e) => {
+        console.log(e)
+        dispatch(updateFeaturedMovies(e))
+    }
+    const { handleSubmit, pristine, reset, submitting } = props;
+
     return (
         <>
-            <form onSubmit={handelSubmit}>
+            <form onSubmit={handleSubmit(e => updateFeaturedMovieOrShow(e))}>
                 <Grid
                     container
                     spacing={0}
@@ -18,7 +27,7 @@ const UpdateHomePage = ({pristine, submitting, handelSubmit, reset}) => {
                         <label> Image URL </label>
                         <div>
                             <Field
-                                name="image"
+                                name="img"
                                 component="input"
                                 type="text"
                                 placeholder="Image URL"
@@ -42,7 +51,7 @@ const UpdateHomePage = ({pristine, submitting, handelSubmit, reset}) => {
                             <Field
                                 name="author"
                                 component="input"
-                                type="email"
+                                type="text"
                                 placeholder="Creator"
                             />
                         </div>

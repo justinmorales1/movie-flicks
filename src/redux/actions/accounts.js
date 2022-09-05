@@ -70,7 +70,25 @@ export const retrieveFeaturedMovies = () => async (dispatch) => {
     try {
         const response = await axiosApi.get("/featured");
         console.log("The response is ", response)
-        dispatch(featuredMovies(response.data?.Items[0]?.FeaturedMoviesAndShows))
+        dispatch(featuredMovies(response.data?.Items[0]?.featuredMoviesAndShows))
+    } catch (e) {
+        console.log("Unable to put new user data")
+    }
+}
+
+export const updateFeaturedMovies = (update) => async (dispatch, getState) => {
+    console.log("The data before is ", update)
+    try {
+        // console.log("The data is ", data)
+        const data = {
+            "title": update.title,
+            "id": update.id,
+            "img": update.img,
+            "author": update.author
+        }
+        console.log("The data is ", data)
+        await axiosApi.post("/featured/0", data);
+        // dispatch(watchListMovie(response.data?.Item?.watchList))
     } catch (e) {
         console.log("Unable to put new user data")
     }
