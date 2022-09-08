@@ -9,12 +9,12 @@ import SimpleForm from "./components/CreateAccount";
 import MovieSearch from "./components/MovieSearch";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import MovieWatchList from "./components/MovieWatchList";
-import HomePage from "./components/HomePage";
+import HomePage from "./components/HomePage/HomePage";
 import CreateAccount from "./components/CreateAccount";
 import Account from "./components/Account";
 import MovieReviews from "./components/MovieReviews";
 import Forum from "./components/Forum";
-import UpdateHomePage from "./components/UpdateHomePage";
+import UpdateHomePage from "./components/HomePage/UpdateHomePage";
 
 const App = () => {
     return (

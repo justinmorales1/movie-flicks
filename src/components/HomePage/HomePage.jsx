@@ -3,9 +3,9 @@ import Typography from "@mui/material/Typography";
 import {Container, ImageList, ImageListItem, ImageListItemBar, ListSubheader} from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from '@mui/icons-material/Info';
-import ImageListMainPage from "./ImageListMainPage";
-import {itemData, mustWatchTVShows} from "../constants/newData";
-import {retrieveFeaturedMovies} from "../redux/actions/accounts";
+import ImageListMainPage from "../ImageListMainPage";
+import {itemData, mustWatchTVShows} from "../../constants/newData";
+import {retrieveFeaturedMovies} from "../../redux/actions/accounts";
 import {useDispatch, useSelector} from "react-redux";
 
 const HomePage = () => {
