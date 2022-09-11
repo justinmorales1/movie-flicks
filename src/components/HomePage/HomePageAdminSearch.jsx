@@ -12,6 +12,7 @@ import MovieSearchInput from "../MovieSearchInput";
 import HomePageAdminSelectedMovieModal from "./HomePageAdminSelectedMovieModal";
 
 const HomePageAdminSearch = () => {
+
     const movieInformationList = useSelector(state => state.movies.data?.Search)
 
     const movieList = movieInformationList?.map((movies, index) => {

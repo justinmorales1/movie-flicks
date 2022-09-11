@@ -6,7 +6,7 @@ import Modal from '@mui/material/Modal';
 import {selectedMovieInformation} from "../../redux/actions/httpRequests";
 import {useDispatch, useSelector} from "react-redux";
 import {watchListMovie} from "../../redux/actions/watchListMovies";
-import {addMovieToUserWatchList} from "../../redux/actions/accounts";
+import {addMovieToUserWatchList, updateFeaturedMovies} from "../../redux/actions/accounts";
 
 const style = {
     position: 'absolute',
@@ -52,6 +52,11 @@ const HomePageAdminSelectedMovieModal = ({title}) => {
         dispatch(addMovieToUserWatchList(movieInformation))
     }
 
+    const updateFeaturedMovieOrShow = (e) => {
+        console.log(e)
+        dispatch(updateFeaturedMovies(e))
+    }
+
     const handleClose = () => setOpen(false);
 
     return (
@@ -70,7 +75,10 @@ const HomePageAdminSelectedMovieModal = ({title}) => {
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                         {movieInformation?.Plot}
                     </Typography>
-                    <Button onClick={addMovieToWatchList}> Select Movie </Button>
+                    <Button onClick={() => updateFeaturedMovieOrShow(movieInformation)}> Add to Featured Movies and Show </Button>
+                    <Button onClick={addMovieToWatchList}> Add to Must Watch Show </Button>
+                    <Button onClick={addMovieToWatchList}> Add to Must Watch Movies </Button>
+
                 </Box>
             </Modal>
         </>

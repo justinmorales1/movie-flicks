@@ -100,3 +100,94 @@ const watchListMoviesAndShows = [
         cols: 2,
     },
 ];
+
+
+const example = {
+    "id": {
+        "S": "0"
+    },
+    "featuredMoviesAndShows": {
+        "L": [
+            {
+                "M": {
+                    "id": {
+                        "N": "0"
+                    },
+                    "author": {
+                        "S": "Justin Roiland and Dan Harmmond"
+                    },
+                    "img": {
+                        "S": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg"
+                    },
+                    "title": {
+                        "S": "Rick and Morty"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "id": {
+                        "N": "1"
+                    },
+                    "author": {
+                        "S": "Chad Stahelski"
+                    },
+                    "img": {
+                        "S": "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_SX300.jpg"
+                    },
+                    "title": {
+                        "S": "John Wick"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "id": {
+                        "N": "2"
+                    },
+                    "author": {
+                        "S": "Ann Peacock, Andrew Adamson, Christopher Markus"
+                    },
+                    "img": {
+                        "S": "https://m.media-amazon.com/images/M/MV5BMTc0NTUwMTU5OV5BMl5BanBnXkFtZTcwNjAwNzQzMw@@._V1_SX300.jpg"
+                    },
+                    "title": {
+                        "S": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "id": {
+                        "S": "3"
+                    },
+                    "author": {
+                        "S": "Jason Hall, Chris Kyle, Scott McEwen"
+                    },
+                    "img": {
+                        "S": "https://m.media-amazon.com/images/M/MV5BMTkxNzI3ODI4Nl5BMl5BanBnXkFtZTgwMjkwMjY4MjE@._V1_SX300.jpg"
+                    },
+                    "title": {
+                        "S": "American Sniper"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "id": {
+                        "S": "tt0120737"
+                    },
+                    "author": {
+                        "S": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens"
+                    },
+                    "img": {
+                        "S": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
+                    },
+                    "title": {
+                        "S": "The Lord of the Rings: The Fellowship of the Ring"
+                    }
+                }
+            }
+        ]
+    }
+}
