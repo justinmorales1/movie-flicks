@@ -38,6 +38,7 @@ const style = {
 const HomePageAdminSelectedMovieModal = ({title}) => {
     const dispatch = useDispatch();
     const movieInformation = useSelector(state => state.selectedMovie?.data)
+    const featuredMovies = useSelector(state => state.featuredMoviesAndShows)
 
     const [open, setOpen] = React.useState(false);
 
@@ -46,20 +47,8 @@ const HomePageAdminSelectedMovieModal = ({title}) => {
         dispatch(selectedMovieInformation(title))
     };
 
-    const addMovieToWatchList = () => {
-        console.log("The move information is ", movieInformation)
-        dispatch(watchListMovie(movieInformation))
-        dispatch(addMovieToUserWatchList(movieInformation))
-    }
-
     const updateFeaturedMovieOrShow = (e) => {
-        console.log(e)
-        dispatch(updateFeaturedMovies(e))
-    }
-
-    const deleteFeaturedMovieOrShow = (e) => {
-        console.log(e)
-        dispatch(deleteFeaturedMovies(e))
+        dispatch(updateFeaturedMovies(e, featuredMovies.length))
     }
 
     const handleClose = () => setOpen(false);
@@ -81,9 +70,6 @@ const HomePageAdminSelectedMovieModal = ({title}) => {
                         {movieInformation?.Plot}
                     </Typography>
                     <Button onClick={() => updateFeaturedMovieOrShow(movieInformation)}> Add to Featured Movies and Show </Button>
-                    <Button onClick={addMovieToWatchList}> Add to Must Watch Show </Button>
-                    <Button onClick={addMovieToWatchList}> Add to Must Watch Movies </Button>
-
                 </Box>
             </Modal>
         </>

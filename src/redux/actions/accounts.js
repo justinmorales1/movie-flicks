@@ -76,13 +76,13 @@ export const retrieveFeaturedMovies = () => async (dispatch) => {
     }
 }
 
-export const updateFeaturedMovies = (update) => async (dispatch, getState) => {
+export const updateFeaturedMovies = (update, index) => async (dispatch, getState) => {
     console.log("The data before is ", update)
     try {
         // console.log("The data is ", data)
         const data = {
             "title": update.Title,
-            "id": update.imdbID,
+            "id": index,
             "img": update.Poster,
             "author": update.Writer
         }

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64d3b3ce-3de4-4c04-b628-f040a5a4e817" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/HomePageAdminDeleteMovieModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomePage/DeleteFeaturedMoviesOrShowFromHomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/DeleteFeaturedMoviesOrShowFromHomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/HomePageAdminSelectedMovieModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/HomePageAdminSelectedMovieModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/UpdateHomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/UpdateHomePage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/actions/accounts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/accounts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
