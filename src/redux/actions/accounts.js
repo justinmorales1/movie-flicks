@@ -99,13 +99,10 @@ export const deleteFeaturedMovies = (update) => async (dispatch, getState) => {
     try {
         // console.log("The data is ", data)
         const data = {
-            "title": update.Title,
-            "id": update.imdbID,
-            "img": update.Poster,
-            "author": update.Writer
+            "id": update.id,
         }
         console.log("The data is ", data)
-        await axiosApi.delete("/featured/0", data);
+        // await axiosApi.delete("/remove-featured-movies/0", data);
         // dispatch(watchListMovie(response.data?.Item?.watchList))
     } catch (e) {
         console.log("Unable to put new user data")

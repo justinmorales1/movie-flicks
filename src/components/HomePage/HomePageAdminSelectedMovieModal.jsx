@@ -6,7 +6,7 @@ import Modal from '@mui/material/Modal';
 import {selectedMovieInformation} from "../../redux/actions/httpRequests";
 import {useDispatch, useSelector} from "react-redux";
 import {watchListMovie} from "../../redux/actions/watchListMovies";
-import {addMovieToUserWatchList, updateFeaturedMovies} from "../../redux/actions/accounts";
+import {addMovieToUserWatchList, deleteFeaturedMovies, updateFeaturedMovies} from "../../redux/actions/accounts";
 
 const style = {
     position: 'absolute',
@@ -55,6 +55,11 @@ const HomePageAdminSelectedMovieModal = ({title}) => {
     const updateFeaturedMovieOrShow = (e) => {
         console.log(e)
         dispatch(updateFeaturedMovies(e))
+    }
+
+    const deleteFeaturedMovieOrShow = (e) => {
+        console.log(e)
+        dispatch(deleteFeaturedMovies(e))
     }
 
     const handleClose = () => setOpen(false);
