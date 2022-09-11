@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import {selectedMovieInformation} from "../../redux/actions/httpRequests";
 import {useDispatch, useSelector} from "react-redux";
-import {deleteFeaturedMovies} from "../../redux/actions/accounts";
+import {deleteFeaturedMovies} from "../../redux/actions/httpRequests/accounts";
 
 const style = {
     position: 'absolute',

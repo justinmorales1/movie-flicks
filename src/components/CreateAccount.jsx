@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import {useDispatch, useSelector} from "react-redux";
 import axiosApi from '../utilities/axios/axios'
-import {createNewAccount, submitNewAccount} from "../redux/actions/accounts";
+import {createNewAccount, submitNewAccount} from "../redux/actions/httpRequests/accounts";
 import {Grid} from "@mui/material";
 
 const CreateAccount = (props) => {

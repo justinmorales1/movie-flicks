@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import {reduxForm} from "redux-form";
 import {useDispatch, useSelector} from "react-redux";
 import {removeMovie} from "../redux/actions/watchListMovies";
-import {retrieveUsersWatchList} from "../redux/actions/accounts";
+import {retrieveUsersWatchList} from "../redux/actions/httpRequests/accounts";
 
 // Actors: "Maribel Verdú, Joaquín Furriel, Joaquín Rapalini"
 // Awards: "2 nominations"
@@ -70,19 +70,18 @@ const rows = [
 
 const MovieWatchList = (props) => {
     const dispatch = useDispatch();
-    const movieList = useSelector(state => state.watchListMovie)
+    const movieList = useSelector(state => state?.watchListMovie)
     const { handleSubmit} = props;
 
     useEffect(() => {
         dispatch(retrieveUsersWatchList())
     },[])
 
-    movieList.forEach((movie, i) => {
+    movieList?.forEach((movie, i) => {
         movie.id = i;
     });
 
     const removeMovieFromWatchList = (e) => {
-        console.log("The selected movie is ", e.row)
         dispatch(removeMovie(e.row.Title))
     }
 

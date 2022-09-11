@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {createNewAccount, updateFeaturedMovies} from "../../redux/actions/accounts";
+import {createNewAccount, updateFeaturedMovies} from "../../redux/actions/httpRequests/accounts";
 import {Grid} from "@mui/material";
 import {Field, reduxForm} from "redux-form";
 import {useDispatch} from "react-redux";

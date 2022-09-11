@@ -6,7 +6,7 @@ import Modal from '@mui/material/Modal';
 import {selectedMovieInformation} from "../redux/actions/httpRequests";
 import {useDispatch, useSelector} from "react-redux";
 import {watchListMovie} from "../redux/actions/watchListMovies";
-import {addMovieToUserWatchList} from "../redux/actions/accounts";
+import {addMovieToUserWatchList} from "../redux/actions/httpRequests/accounts";
 
 const style = {
     position: 'absolute',

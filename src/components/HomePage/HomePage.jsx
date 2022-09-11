@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import InfoIcon from '@mui/icons-material/Info';
 import ImageListMainPage from "../ImageListMainPage";
 import {itemData, mustWatchTVShows} from "../../constants/newData";
-import {retrieveFeaturedMovies} from "../../redux/actions/accounts";
+import {retrieveFeaturedMovies} from "../../redux/actions/httpRequests/accounts";
 import {useDispatch, useSelector} from "react-redux";
 
 const HomePage = () => {

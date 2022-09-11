@@ -1,7 +1,7 @@
-import {SUBMIT_NEW_ACCOUNT} from "../../constants/constans";
-import axiosApi from './../../utilities/axios/axios'
-import {watchListMovie} from "./watchListMovies";
-import {featuredMovies} from "./homePageActions";
+import {SUBMIT_NEW_ACCOUNT} from "../../../constants/constans";
+import axiosApi from '../../../utilities/axios/axios'
+import {watchListMovie} from "../watchListMovies";
+import {featuredMovies} from "../homePageActions";
 
 
 export const submitNewAccount = (payload) => {

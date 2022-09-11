@@ -3,7 +3,7 @@ import {ButtonGroup, Container, Grid, Stack} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import {useSelector} from "react-redux";
-import {submitNewAccount} from "../redux/actions/accounts";
+import {submitNewAccount} from "../redux/actions/httpRequests/accounts";
 import {Field, reduxForm} from "redux-form";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
